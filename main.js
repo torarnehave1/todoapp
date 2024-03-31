@@ -16,7 +16,7 @@ const projectId = import.meta.env.VITE_API_PROJECT_ID;
 const databaseKey = import.meta.env.VITE_API_DATABASE_KEY;
 const collectionKey = import.meta.env.VITE_API_COLLECTION_KEY;
 
-console.log(apiEndpoint, projectId, databaseKey, collectionKey);
+//console.log(apiEndpoint, projectId, databaseKey, collectionKey);
 
 
 const client = new Client();
@@ -25,8 +25,8 @@ const client = new Client();
 client
     .setEndpoint(apiEndpoint)
     .setProject(projectId);
-    console.log('FASFS') 
-console.log(databaseKey)    
+   // console.log('FASFS') 
+//console.log(databaseKey)    
 
 const db = new Databases(client);
 
@@ -108,8 +108,8 @@ document.getElementById('selectAll').addEventListener('change', function() {
 async function getTask() {
     try {
         const response = await db.listDocuments(databaseKey, collectionKey);
-        console.log(response);
-        console.log('JIPPI This will appear in the integrated terminal');
+        //console.log(response);
+       // console.log('JIPPI This will appear in the integrated terminal');
 
         for (const task of response.documents) {
             await rendertoDom(task);
