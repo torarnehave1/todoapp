@@ -1,4 +1,5 @@
 import { Client, Databases, ID } from 'appwrite';
+require('dotenv').config();
 /**
  * Initializes a new Appwrite client.
  *
@@ -10,13 +11,14 @@ import { Client, Databases, ID } from 'appwrite';
  * @returns {Client} The Appwrite client instance.
  */
 
-const client = new Client();
-const databaseId = '6606a184338e6f8737e0'; // Database ID
-const collectionId = '6606a1b3b518504eb993'; // Collection ID
 
+
+const client = new Client();
+const databaseId = process.env.API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
+const collectionId = process.env.API_COLLECTION_KEY 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('6606a08fa5e4453119f3');
+    .setProject(API_PROJECT_ID);
 
 const db = new Databases(client);
 
@@ -52,8 +54,8 @@ importBtn.addEventListener('click', () => {
 
                     
                     const response = await db.createDocument(
-                         '6606a184338e6f8737e0',
-                        '6606a1b3b518504eb993',
+                         databaseId,
+                        collectionId,
                       ID.unique(),
                         {
                            body: tnameString,
@@ -158,8 +160,8 @@ async function rendertoDom(task) {
 async function deleteTask(taskId) {
     try {
         const response = await db.deleteDocument(
-            '6606a184338e6f8737e0', 
-            '6606a1b3b518504eb993', 
+            databaseId, 
+            collectionId, 
             taskId);
 
             document.getElementById(`task-${taskId}`).remove();
