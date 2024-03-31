@@ -1,3 +1,37 @@
+# Todo App Documentation
+
+## Overview
+
+- Todo application using Appwrite for backend database and authentication
+- Allows users to create, read, update, delete todo tasks  
+- Uses Appwrite SDK to interact with database and auth
+- Renders tasks from Appwrite into the DOM for display
+- Has form to add new tasks which saves to Appwrite
+- Button to import CSV file and save contents to Appwrite 
+- Select all checkbox to select tasks for batch actions
+
+## Key Files
+
+- index.html - Main HTML document
+  - Contains form, task list, import button
+  - Imports Appwrite SDK and PapaParse library
+- main.js - Main JavaScript file
+  - Initializes Appwrite client
+  - Functions to render tasks, get tasks, add tasks
+  - Event listeners for form submit and file import  
+- style.css - Stylesheet
+  - Styles for task elements, form, buttons
+
+## Components
+
+- Task List - Displays tasks fetched from Appwrite
+- Task Item - Individual task element
+- Add Task Form - Form to add new task
+- Import Button - Imports CSV file and saves to Appwrite
+- Select All - Selects all tasks for batch actions
+
+
+
 *** A Index.html file for the project ***
 
 The document starts with the necessary HTML structure, including the <!doctype html> declaration and <html> tag with a language attribute set to English.
@@ -24,4 +58,10 @@ In summary, this code sets up a basic HTML document with a form and a tasks list
 
 Component B outlines the CSV file upload functionality within the application. It utilizes the Papa Parse library for parsing CSV files, which is included in the Index.html via a <script> tag: <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>. This script enables the application to read and parse CSV files directly in the browser, facilitating the efficient processing of user-uploaded CSV data. Once parsed, this data is prepared for upload to the Appwrite.io database, demonstrating a direct application of Papa Parse for data handling and manipulation in the web environment."
 This expanded description explicitly connects the inclusion of the Papa Parse library in the Index.html file to its critical role in CSV file processing and highlights its importance in the application's data management workflow.
+
+Link to Whimsical System Architeckture
+
+https://whimsical.com/refined-node-js-app-architecture-FcuRYx359okc9C772NZ5bi
+
+
 
