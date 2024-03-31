@@ -1,5 +1,8 @@
 import { Client, Databases, ID } from 'appwrite';
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 /**
  * Initializes a new Appwrite client.
  *
@@ -14,11 +17,13 @@ require('dotenv').config();
 
 
 const client = new Client();
-const databaseId = process.env.API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
-const collectionId = process.env.API_COLLECTION_KEY 
+const databaseId = API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
+const collectionId = API_COLLECTION_KEY 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
     .setProject(API_PROJECT_ID);
+    console.log('FASFS') 
+console.log(databaseId)    
 
 const db = new Databases(client);
 
