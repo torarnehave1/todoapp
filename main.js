@@ -14,14 +14,20 @@ dotenv.config();
  * @returns {Client} The Appwrite client instance.
  */
 
+const apiEndpoint = import.meta.env.VITE_API_ENDPOINT;
+const projectId = import.meta.env.VITE_API_PROJECT_ID;
+const databaseKey = import.meta.env.VITE_API_DATABASE_KEY;
+const collectionKey = import.meta.env.VITE_API_COLLECTION_KEY;
+
+console.log(apiEndpoint, projectId, databaseKey, collectionKey);
 
 
 const client = new Client();
-const databaseId = API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
-const collectionId = API_COLLECTION_KEY 
+const databaseId = VITE_API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
+const collectionId = VITE_API_COLLECTION_KEY 
 client
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject(API_PROJECT_ID);
+    .setEndpoint(VITE_API_ENDPOINT)
+    .setProject(VITE_API_PROJECT_ID);
     console.log('FASFS') 
 console.log(databaseId)    
 
