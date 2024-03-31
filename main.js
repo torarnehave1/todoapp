@@ -20,13 +20,13 @@ console.log(apiEndpoint, projectId, databaseKey, collectionKey);
 
 
 const client = new Client();
-const databaseId = VITE_API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
-const collectionId = VITE_API_COLLECTION_KEY 
+//const databaseId = VITE_API_DATABASE_KEY //'6606a184338e6f8737e0'; // Database ID
+//const collectionId = VITE_API_COLLECTION_KEY 
 client
-    .setEndpoint(VITE_API_ENDPOINT)
-    .setProject(VITE_API_PROJECT_ID);
+    .setEndpoint(apiEndpoint)
+    .setProject(projectId);
     console.log('FASFS') 
-console.log(databaseId)    
+console.log(databaseKey)    
 
 const db = new Databases(client);
 
@@ -62,8 +62,8 @@ importBtn.addEventListener('click', () => {
 
                     
                     const response = await db.createDocument(
-                         databaseId,
-                        collectionId,
+                         databaseKey,
+                        collectionKey,
                       ID.unique(),
                         {
                            body: tnameString,
@@ -107,7 +107,7 @@ document.getElementById('selectAll').addEventListener('change', function() {
 
 async function getTask() {
     try {
-        const response = await db.listDocuments(databaseId, collectionId);
+        const response = await db.listDocuments(databaseKey, collectionKey);
         console.log(response);
         console.log('JIPPI This will appear in the integrated terminal');
 
@@ -168,8 +168,8 @@ async function rendertoDom(task) {
 async function deleteTask(taskId) {
     try {
         const response = await db.deleteDocument(
-            databaseId, 
-            collectionId, 
+            databaseKey, 
+            collectionKey, 
             taskId);
 
             document.getElementById(`task-${taskId}`).remove();
