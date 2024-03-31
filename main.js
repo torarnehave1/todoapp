@@ -1,7 +1,4 @@
 import { Client, Databases, ID } from 'appwrite';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 /**
  * Initializes a new Appwrite client.
