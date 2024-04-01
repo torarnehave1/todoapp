@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table </title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+  }
+  .plan {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+  .plan h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .plan ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  .plan button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+  }
+  .plan button:hover {
+    background-color: #4cae4c;
+  }
+</style>
+</head>
+<body>
+
+<div class="pricing-table">
+  <div class="plan">
+    <h2>FREE</h2>
+    <ul>
+      <li>Access to all products</li>
+      <li>Multi-modal data annotation</li>
+      <li>Model error analysis</li>
+      <li>500 LBUs per month</li>
+    </ul>
+    <button>Try for free</button>
+  </div>
+
+  <div class="plan">
+    <h2>STARTER</h2>
+    <ul>
+      <li>Everything in Free</li>
+      <li>Unlimited users</li>
+      <li>Custom labeling & workflows</li>
+      <li>10,000 LBUs per month</li>
+    </ul>
+    <button>Try for Starter</button>
+  </div>
+
+  <div class="plan">
+    <h2>ENTERPRISE</h2>
+    <ul>
+      <li>Everything in Starter</li>
+      <li>Multiple workspaces</li>
+      <li>Advanced analytics</li>
+      <li>Contact sales for LBUs</li>
+    </ul>
+    <button>Contact sales</button>
+  </div>
+</div>
+
+</body>
+</html>
