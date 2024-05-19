@@ -10,6 +10,13 @@
 - Button to import CSV file and save contents to Appwrite 
 - Select all checkbox to select tasks for batch actions
 
+## Set up BackEnd
+
+npm create vite
+cd folder
+npm install
+npm run dev
+
 ## Key Files
 
 - index.html - Main HTML document
