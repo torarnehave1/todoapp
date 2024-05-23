@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile 1</h1>
+    <img src="<%= imageUrl %>" alt="Profile Image" width="60" height="60">
+    <p>Name: <%= user.displayName %></p>
+    <p>Company: <%= user._json.company %></p>
+    <p>Email: <%= user.emails[0].value %></p>
+    <p>Bio: <%= user._json.bio %></p>
+</body>
+</html>
