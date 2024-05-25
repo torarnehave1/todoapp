@@ -7,6 +7,7 @@ import { dirname } from 'path';
 import testRoutes from './src/routes/test/test_routes.js';
 import authroutes from './src/routes/auth/github_routes.js';
 import crypto from 'crypto';
+import { connect } from 'mongoose';
 
 const secret = crypto.randomBytes(64).toString('hex');
 
@@ -48,6 +49,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use('/t', testRoutes);
 app.use('/auth', authroutes)
+
+
+connect(process.env.MONGO_DB_URL)
+  .then(() => console.log('Connected to MongoDB with Mongoose'))
+  .catch(err => console.error('Could not connect to MongoDB', err));
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
